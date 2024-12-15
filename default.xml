@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/"/>
+    <remote name="aosp"
+            fetch="https://android.googlesource.com/"
+            review="https://android-review.googlesource.com/"/>
     <remote name="vermontos"
             fetch="https://github.com/VermontOS/"
             revision="refs/heads/1"/>
+
+    <default revision="refs/tags/android-15.0.0_r0.39"
+             remote="aosp"
+             sync-j="4"/>
 
     <project path="common" name="kernel_common-5.10" remote="vermontos"/>
 </manifest>
